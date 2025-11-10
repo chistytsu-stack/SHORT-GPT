@@ -1,0 +1,1 @@
+exports.getSystem = (req, res) => res.json({ uptime: process.uptime() });

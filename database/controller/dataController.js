@@ -1,0 +1,1 @@
+exports.getData = (req, res) => res.json({ data: [] });
