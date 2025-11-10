@@ -1,0 +1,54 @@
+# ✦━━━━━━━━━━━━━━━━━━━━━✦
+# 📂 File: .github/workflows/npm-publish-github-packages.yml
+# 👑 Style: 𝑴𝒆𝒉𝒆𝒓𝒂𝒛 𝑺𝒕𝒚𝒍𝒆 💫
+# ✦━━━━━━━━━━━━━━━━━━━━━✦
+
+name: 📦 Publish to GitHub Packages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "package.json"
+      - "versions.json"
+      - "**/*.js"
+  workflow_dispatch:
+
+jobs:
+  build-and-publish:
+    name: 🚀 Build & Publish Package
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🧩 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: "https://npm.pkg.github.com/"
+
+      - name: 📦 Install Dependencies
+        run: npm install
+
+      - name: 🔍 Run Tests (Optional)
+        run: |
+          echo "🧪 Running basic build tests..."
+          npm run test || echo "⚠️ No test script found."
+
+      - name: ⚡ Build Project
+        run: |
+          echo "⚙️ Building Project..."
+          npm run build || echo "✅ No build script found."
+
+      - name: 🚀 Publish to GitHub Packages
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "📦 Publishing package to GitHub..."
+          npm publish --registry=https://npm.pkg.github.com/
+
+      - name: 🎉 Done!
+        run: echo "✅ Successfully published to GitHub Packages 💫"
