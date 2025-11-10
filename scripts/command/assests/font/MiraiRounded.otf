@@ -1,0 +1,27 @@
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
+// 🅰️ MiraiRounded.otf - Font Auto Downloader
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
+
+const fs = require("fs");
+const https = require("https");
+
+const dir = "./assets/fonts";
+fs.mkdirSync(dir, { recursive: true });
+
+// Mirai Rounded type font (from Google Fonts - Nunito Rounded)
+const fontUrl = "https://github.com/google/fonts/raw/main/ofl/nunitosans/NunitoSans_7pt-Regular.ttf";
+const outputPath = `${dir}/MiraiRounded.otf`;
+
+console.log("⏳ Downloading MiraiRounded.otf ...");
+
+https.get(fontUrl, (res) => {
+  const fileStream = fs.createWriteStream(outputPath);
+  res.pipe(fileStream);
+  fileStream.on("finish", () => {
+    fileStream.close();
+    console.log("✅ MiraiRounded.otf downloaded successfully!");
+    console.log("📁 Saved to ./assets/fonts/");
+  });
+}).on("error", (err) => {
+  console.error("❌ Font download failed:", err.message);
+});
