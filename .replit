@@ -1,2 +1,13 @@
-rm -rf node_modules package-lock.json
-npm install
+run = "npm start"
+
+language = "nodejs"
+entrypoint = "index.js"
+
+[env]
+NODE_ENV = "production"
+
+[nix]
+channel = "stable-22_11"
+
+[packager]
+packageManager = "npm"
