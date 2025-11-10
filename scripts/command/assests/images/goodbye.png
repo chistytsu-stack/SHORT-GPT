@@ -1,0 +1,56 @@
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
+//  💫 Meheraz Bot - Goodbye Image Generator
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
+
+const fs = require("fs");
+const { createCanvas, registerFont } = require("canvas");
+
+// Font setup
+registerFont("./assets/fonts/Meheraz-Regular.ttf", { family: "Meheraz" });
+registerFont("./assets/fonts/Mirai-Soft.otf", { family: "Mirai" });
+
+// Canvas size
+const width = 1000;
+const height = 500;
+const canvas = createCanvas(width, height);
+const ctx = canvas.getContext("2d");
+
+// Background gradient (soft purple + dark blue)
+const gradient = ctx.createLinearGradient(0, 0, width, height);
+gradient.addColorStop(0, "#0a001a");
+gradient.addColorStop(1, "#4b0099");
+ctx.fillStyle = gradient;
+ctx.fillRect(0, 0, width, height);
+
+// Border glow
+ctx.shadowColor = "#ff33cc";
+ctx.shadowBlur = 25;
+ctx.strokeStyle = "#ff66ff";
+ctx.lineWidth = 5;
+ctx.strokeRect(20, 20, width - 40, height - 40);
+
+// Main text
+ctx.shadowColor = "#ff99ff";
+ctx.shadowBlur = 15;
+ctx.font = "bold 55px Meheraz";
+ctx.fillStyle = "#ffffff";
+ctx.textAlign = "center";
+ctx.fillText("✦ 𝑮𝒐𝒐𝒅𝒃𝒚𝒆 𝑭𝒓𝒊𝒆𝒏𝒅 ✦", width / 2, height / 2 - 40);
+
+// Sub text
+ctx.font = "30px Mirai";
+ctx.shadowBlur = 0;
+ctx.fillStyle = "#ffb3ff";
+ctx.fillText("💫 We'll miss your vibe here!", width / 2, height / 2 + 40);
+
+// Credit text
+ctx.font = "20px Mirai";
+ctx.fillStyle = "#ff99ff";
+ctx.fillText("⚡ Powered by Meheraz", width / 2, height - 40);
+
+// Save file
+const buffer = canvas.toBuffer("image/png");
+fs.mkdirSync("./assets/images", { recursive: true });
+fs.writeFileSync("./assets/images/goodbye.png", buffer);
+
+console.log("✅ goodbye.png generated successfully!");
