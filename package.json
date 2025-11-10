@@ -1,0 +1,35 @@
+{
+  "name": "meheraz-mirai-bot",
+  "version": "1.0.0",
+  "description": "✨ A Stylish and Powerful Messenger Bot built by Meheraz Islam Chishti 💫 | Based on fb-chat-api / Mirai.js",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "update": "node update.js",
+    "backup": "node auto-appstate-backup.js",
+    "restore": "node restoreBackup.js"
+  },
+  "author": "Meheraz Islam Chishti",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "chalk": "^5.3.0",
+    "fb-chat-api": "^1.6.0",
+    "fs-extra": "^11.2.0",
+    "moment": "^2.30.1",
+    "path": "^0.12.7"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "facebook-bot",
+    "messenger-bot",
+    "mirai",
+    "fb-chat-api",
+    "meheraz",
+    "chatbot",
+    "auto-reply",
+    "ai-bot"
+  ]
+}
