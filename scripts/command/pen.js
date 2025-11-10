@@ -6,8 +6,8 @@ module.exports = {
   config: {
     name: "pending",
     aliases: ["pen", "pending"],
-    version: "2.0",
-    author: "Meheraz Islam (Chisty)",
+    version: "2.1",
+    author: "✦ 𝑴𝒆𝒉𝒆𝒓𝒂𝒛 𝑰𝒔𝒍𝒂𝒎 𝑪𝒉𝒊𝒔𝒕𝒚 ✦",
     countDown: 5,
     role: 2,
     shortDescription: "Accept pending messages",
@@ -34,12 +34,12 @@ module.exports = {
 
     api.unsendMessage(messageID);
 
-    const filePath = path.join(__dirname, "assets", "approve.mp4");
-    const videoUrl = "https://drive.google.com/uc?export=download&id=19D0PcMNOsIY3kniXDq3tlQIh7UG-YLVe";
+    const gifUrl = "https://drive.google.com/uc?export=download&id=1cMclj7lL-bkGKR6OLZ2YsL-cuEIlCC6S"; // <--- তোমার GIF লিংক
+    const gifPath = path.join(__dirname, "assets", "meheraz_glow.gif");
 
     try {
-      const response = await axios({ method: "GET", url: videoUrl, responseType: "stream" });
-      const writer = fs.createWriteStream(filePath);
+      const response = await axios({ method: "GET", url: gifUrl, responseType: "stream" });
+      const writer = fs.createWriteStream(gifPath);
       response.data.pipe(writer);
 
       writer.on("finish", async () => {
@@ -63,23 +63,19 @@ module.exports = {
 ✦━━━━━━━━━━━━━━━━━━━━━✦
 ⚡ 𝗠𝗲𝗵𝗲𝗿𝗮𝘇 𝗦𝘁𝘆𝗹𝗲 ⚡
 ✦━━━━━━━━━━━━━━━━━━━━━✦`,
-            attachment: fs.createReadStream(filePath)
+            attachment: fs.createReadStream(gifPath)
           }, targetID);
         }
 
-        api.sendMessage(
-          `✅ | Successfully approved ${indices.length} thread(s)!`,
-          threadID,
-          messageID
-        );
+        api.sendMessage(`✅ | Successfully approved ${indices.length} thread(s)!`, threadID, messageID);
       });
 
       writer.on("error", err => {
-        api.sendMessage("❌ | Error writing video file!", threadID, messageID);
+        api.sendMessage("❌ | Error writing GIF file!", threadID, messageID);
         console.error(err);
       });
     } catch (err) {
-      api.sendMessage("❌ | Failed to download file!", threadID, messageID);
+      api.sendMessage("❌ | Failed to download GIF!", threadID, messageID);
       console.error(err);
     }
   },
@@ -140,25 +136,4 @@ module.exports = {
 ✦━━━━━━━━━━━━━━━━━━━━━✦
 
 ${msg}
-💬 Reply with number(s) to approve  
-or type “c” to cancel.
-
-✦━━━━━━━━━━━━━━━━━━━━━✦
-⚡ 𝗠𝗲𝗵𝗲𝗿𝗮𝘇 𝗦𝘁𝘆𝗹𝗲 ⚡
-✦━━━━━━━━━━━━━━━━━━━━━✦`,
-        threadID,
-        (err, info) => {
-          global.GoatBot.onReply.set(info.messageID, {
-            commandName: this.config.name,
-            messageID: info.messageID,
-            author: senderID,
-            pending: list
-          });
-        },
-        messageID
-      );
-    } else {
-      api.sendMessage(`📭 | No ${listType}(s) pending approval.`, threadID, messageID);
-    }
-  }
-};
+💬 Reply with number(s) to appr
