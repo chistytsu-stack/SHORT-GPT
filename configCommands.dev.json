@@ -1,0 +1,109 @@
+{
+  "COMMANDS": {
+    "uptime": {
+      "enabled": true,
+      "cooldown": 5,
+      "role": 0,
+      "usage": "{prefix}uptime",
+      "description": "Show how long the bot has been running.",
+      "style": "Meheraz"
+    },
+    "help": {
+      "enabled": true,
+      "cooldown": 3,
+      "role": 0,
+      "usage": "{prefix}help [command]",
+      "description": "Show command list or details.",
+      "style": "Meheraz"
+    },
+    "ping": {
+      "enabled": true,
+      "cooldown": 3,
+      "role": 0,
+      "usage": "{prefix}ping",
+      "description": "Test bot response speed.",
+      "style": "Meheraz"
+    },
+    "prefix": {
+      "enabled": true,
+      "cooldown": 4,
+      "role": 0,
+      "usage": "{prefix}prefix [newprefix]",
+      "description": "Change or show current prefix.",
+      "style": "Meheraz"
+    },
+    "uid": {
+      "enabled": true,
+      "cooldown": 4,
+      "role": 0,
+      "usage": "{prefix}uid [@tag or reply]",
+      "description": "Get Facebook user ID from mention or reply.",
+      "style": "Meheraz"
+    },
+    "sing": {
+      "enabled": true,
+      "cooldown": 8,
+      "role": 0,
+      "usage": "{prefix}sing [song name]",
+      "description": "Search and play YouTube music without API.",
+      "style": "Meheraz"
+    },
+    "pending": {
+      "enabled": true,
+      "cooldown": 10,
+      "role": 1,
+      "usage": "{prefix}pending",
+      "description": "Show list of pending friend requests.",
+      "style": "Meheraz"
+    },
+    "broadcast": {
+      "enabled": true,
+      "cooldown": 15,
+      "role": 2,
+      "usage": "{prefix}notify [message]",
+      "description": "Send a message to all threads (admin only).",
+      "style": "Meheraz"
+    },
+    "restart": {
+      "enabled": true,
+      "cooldown": 20,
+      "role": 2,
+      "usage": "{prefix}restart",
+      "description": "Restart the bot safely.",
+      "style": "Meheraz"
+    },
+    "update": {
+      "enabled": true,
+      "cooldown": 30,
+      "role": 2,
+      "usage": "{prefix}update",
+      "description": "Check and apply latest bot updates.",
+      "style": "Meheraz"
+    },
+    "notification": {
+      "enabled": true,
+      "cooldown": 5,
+      "role": 2,
+      "usage": "{prefix}notify [message]",
+      "description": "Send custom message or announcement.",
+      "style": "Meheraz"
+    },
+    "custom": {
+      "enabled": true,
+      "cooldown": 8,
+      "role": 0,
+      "usage": "{prefix}custom [command]",
+      "description": "Test or show Meheraz custom styled response.",
+      "style": "Meheraz"
+    }
+  },
+  "GLOBAL": {
+    "DEFAULT_ROLE": 0,
+    "MAX_COOLDOWN": 30,
+    "MIN_COOLDOWN": 2,
+    "SHOW_DISABLED_COMMANDS": true,
+    "LOG_COMMAND_USAGE": true,
+    "STYLE": "Meheraz",
+    "FAST_RESPONSE_MODE": true
+  }
+}
