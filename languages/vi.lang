@@ -1,0 +1,77 @@
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
+//  languages/vi.lang
+//  💫 Meheraz Edition — Global Vietnamese Texts
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
+
+module.exports = {
+  // ─── ⚙️ Hệ thống ───────────────────────────────────────
+  system: {
+    start: "🚀 Bot đã online!",
+    stop: "🛑 Bot đã dừng.",
+    restart: "🔁 Đang khởi động lại hệ thống...",
+    updating: "⬆️ Đang cập nhật các module...",
+    error: "⚠️ Đã xảy ra lỗi: {error}",
+    ready: "💫 Sẵn sàng và chạy với tên {botName}!",
+    loading: "⏳ Đang tải dữ liệu, vui lòng chờ..."
+  },
+
+  // ─── 🪄 Giao diện chung ───────────────────────────────────
+  ui: {
+    yes: "✅ Có",
+    no: "❌ Không",
+    confirm: "⚡ Xác nhận",
+    cancel: "🚫 Hủy",
+    back: "⬅️ Quay lại",
+    next: "➡️ Tiếp"
+  },
+
+  // ─── 💬 Chat & Phản hồi ─────────────────────────────────
+  chat: {
+    processing: "⏳ Đang xử lý yêu cầu của bạn...",
+    success: "✅ Hoàn tất thành công!",
+    failed: "❌ Thao tác thất bại. Vui lòng thử lại!",
+    blocked: "🚫 Hành động này không được phép!",
+    permission: "⚠️ Bạn không có quyền thực hiện điều đó."
+  },
+
+  // ─── 👥 Nhóm & Thành viên ───────────────────────────────
+  group: {
+    join: "🎉 Chào mừng {name} đến với {group}!",
+    leave: "👋 {name} đã rời khỏi nhóm.",
+    kick: "🚪 {name} đã bị xóa bởi quản trị viên.",
+    promote: "👑 {name} đã được thăng quyền quản trị viên!",
+    demote: "🔻 {name} đã bị hạ quyền quản trị viên."
+  },
+
+  // ─── 🏓 Lệnh ─────────────────────────────────────────────
+  command: {
+    invalid: "❌ Lệnh không hợp lệ! Gõ {prefix}help để xem danh sách.",
+    cooldown: "⏱️ Vui lòng đợi {time}s trước khi dùng lại.",
+    disabled: "🚫 Lệnh này hiện bị vô hiệu.",
+    error: "⚠️ Lỗi khi thực hiện lệnh: {cmd}"
+  },
+
+  // ─── 🧠 AI & Thông tin ─────────────────────────────────
+  ai: {
+    thinking: "🤖 Đang suy nghĩ...",
+    response: "💬 {botName}: {reply}",
+    error: "⚠️ AI không thể xử lý yêu cầu của bạn!"
+  },
+
+  // ─── 🪶 Khác ────────────────────────────────────────────
+  time: {
+    now: "🕒 Thời gian hiện tại: {time}",
+    date: "📅 Hôm nay là {date}",
+    uptime: "💫 Thời gian hoạt động: {uptime}"
+  },
+
+  developer: {
+    author: "👑 Nhà phát triển: Meheraz Islam Chishti",
+    contact: "💌 Liên hệ: {link}",
+    powered: "⚡ Được vận hành bởi Meheraz 💫"
+  }
+};
+
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
+// ⚡ Powered by Meheraz 💫
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
