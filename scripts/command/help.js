@@ -4,7 +4,7 @@ const path = require("path");
 module.exports = {
   config: {
     name: "help",
-    aliases: ["h", "cmds"],
+    aliases: ["help"],
     version: "1.0.0",
     author: "Meheraz Islam",
     role: 0,
