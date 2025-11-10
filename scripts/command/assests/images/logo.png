@@ -1,0 +1,40 @@
+// file: make_logo.js
+// run: npm install canvas && node make_logo.js
+
+const { createCanvas, loadImage } = require("canvas");
+const fs = require("fs");
+const path = require("path");
+
+(async () => {
+  const width = 800;
+  const height = 300;
+  const canvas = createCanvas(width, height);
+  const ctx = canvas.getContext("2d");
+
+  // transparent background
+  ctx.clearRect(0, 0, width, height);
+
+  // gradient glow
+  const gradient = ctx.createLinearGradient(0, 0, width, 0);
+  gradient.addColorStop(0, "#00d4ff");
+  gradient.addColorStop(1, "#00ffa3");
+
+  // main text
+  ctx.font = "bold 90px Sans-serif";
+  ctx.fillStyle = gradient;
+  ctx.shadowColor = "#00e5ff";
+  ctx.shadowBlur = 30;
+  ctx.textAlign = "center";
+  ctx.fillText("Meheraz Bot", width / 2, 160);
+
+  // tagline
+  ctx.font = "35px Sans-serif";
+  ctx.shadowBlur = 10;
+  ctx.fillText("⚡ Powered by Meheraz", width / 2, 230);
+
+  const outPath = path.join(__dirname, "assets", "images", "logo.png");
+  fs.mkdirSync(path.dirname(outPath), { recursive: true });
+  fs.writeFileSync(outPath, canvas.toBuffer("image/png"));
+
+  console.log("✅  Created:", outPath);
+})();
