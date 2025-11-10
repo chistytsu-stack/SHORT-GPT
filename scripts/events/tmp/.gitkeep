@@ -1,0 +1,18 @@
+# ✦━━━━━━━━━━━━━━━━━━━━━✦
+# ⚙️ Meheraz Bot Temporary Storage Keeper
+# ────────────────────────────────────────
+# This file ensures the "event/tpm" folder
+# remains in the Git repository even if empty.
+#
+# 📦 Purpose:
+#   - Temporary files during event runtime ⚡
+#   - API cache and user temp data 🧠
+#   - Log fragments or debug dumps 🪄
+#
+# ⚠️ Warning:
+#   Do NOT delete this file or folder.
+#   It helps the Mirai × Meheraz engine
+#   maintain smooth runtime operations.
+#
+# 💫 Powered by Meheraz Framework 💫
+# ✦━━━━━━━━━━━━━━━━━━━━━✦
