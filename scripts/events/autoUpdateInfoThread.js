@@ -3,17 +3,11 @@ const moment = require("moment-timezone");
 
 module.exports = {
   config: {
-    name: "autoupdatethread",
-    aliases: ["autoupdateinfo", "autothread"],
-    version: "1.0.0",
+    name: "autoUpdateInfoThread",
+    version: "1.1.0",
     author: "Meheraz 💫",
-    role: 0,
-    shortDescription: { en: "Auto update thread information" },
-    longDescription: { en: "Automatically updates group info, name & member stats" },
-    category: "system",
-    guide: {
-      en: "{pn} — will auto-update thread info when members join/leave."
-    }
+    description: "Automatically updates thread info (name, member count, photo)",
+    category: "event",
   },
 
   onEvent: async function ({ api, event, Threads }) {
@@ -24,28 +18,30 @@ module.exports = {
       const memberCount = threadInfo.participantIDs.length;
       const time = moment.tz("Asia/Dhaka").format("hh:mm A, DD MMM YYYY");
 
-      const newName = `💬 ${threadName} | 👥 ${memberCount} Members`;
+      // নতুন নাম অটো সেট করবে
+      const newName = `💬 ${threadName} | 👥 ${memberCount} সদস্য`;
       await api.setTitle(newName, threadID);
 
-      const content = 
-`✦━━━━━━━━━━━━━━━━━━━━━✦
-💫 𝑴𝒆𝒉𝒆𝒓𝒂𝒛 𝑩𝒐𝒕 𝑨𝒖𝒕𝒐 𝑼𝒑𝒅𝒂𝒕𝒆 💫
+      // সুন্দর নোটিফিকেশন
+      const msg = `✦━━━━━━━━━━━━━━━━━━━━━✦
+💫 𝑴𝒆𝒉𝒆𝒓𝒂𝒛 𝑩𝒐𝒕 𝑻𝒉𝒓𝒆𝒂𝒅 𝑼𝒑𝒅𝒂𝒕𝒆 💫
 ───────────────────────
-📛 Group Name: ${threadName}
-👥 Members: ${memberCount}
-🕒 Updated: ${time}
+📛 গ্রুপ নাম: ${threadName}
+👥 মোট সদস্য: ${memberCount}
+🕒 সময়: ${time}
 ───────────────────────
-⚡ Powered by Mirai × Meheraz
+⚡ অটো আপডেট সফলভাবে সম্পন্ন!
+💎 Meheraz Engine
 ✦━━━━━━━━━━━━━━━━━━━━━✦`;
 
-      await api.sendMessage(content, threadID);
+      api.sendMessage(msg, threadID);
 
-      // Optional logging
-      const logData = `[${time}] Updated ${threadName} (${memberCount} members)\n`;
-      fs.appendFileSync(__dirname + "/logs/autoUpdate.log", logData);
+      // Log save
+      const logData = `[${time}] Updated Thread: ${threadName} (${memberCount} members)\n`;
+      fs.appendFileSync(__dirname + "/../data/threadUpdate.log", logData);
 
-    } catch (error) {
-      console.error("❌ AutoUpdate Error:", error);
+    } catch (err) {
+      console.error("❌ autoUpdateInfoThread Error:", err);
     }
-  }
+  },
 };
