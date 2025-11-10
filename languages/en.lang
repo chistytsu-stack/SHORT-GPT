@@ -1,0 +1,78 @@
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
+//  languages/en.lang
+//  💫 Meheraz Edition — Global English Texts
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
+
+module.exports = {
+  // ─── ⚙️ System ───────────────────────────────────────
+  system: {
+    start: "🚀 Bot is now online!",
+    stop: "🛑 Bot has been stopped.",
+    restart: "🔁 Restarting system...",
+    updating: "⬆️ Updating modules...",
+    error: "⚠️ An error occurred: {error}",
+    ready: "💫 Ready and running as {botName}!",
+    loading: "⏳ Loading data, please wait..."
+  },
+
+  // ─── 🪄 General UI ───────────────────────────────────
+  ui: {
+    yes: "✅ Yes",
+    no: "❌ No",
+    confirm: "⚡ Confirm",
+    cancel: "🚫 Cancel",
+    back: "⬅️ Back",
+    next: "➡️ Next",
+    done: "🎉 Done!"
+  },
+
+  // ─── 💬 Chat & Reactions ─────────────────────────────
+  chat: {
+    processing: "⏳ Processing your request...",
+    success: "✅ Done successfully!",
+    failed: "❌ Operation failed. Try again!",
+    blocked: "🚫 Action not allowed here!",
+    permission: "⚠️ You don't have permission to do that."
+  },
+
+  // ─── 👥 Group & Member ───────────────────────────────
+  group: {
+    join: "🎉 Welcome {name} to {group}!",
+    leave: "👋 {name} left the group.",
+    kick: "🚪 {name} was removed by an admin.",
+    promote: "👑 {name} has been promoted to admin!",
+    demote: "🔻 {name} has been demoted from admin."
+  },
+
+  // ─── 🏓 Commands ─────────────────────────────────────
+  command: {
+    invalid: "❌ Invalid command! Type {prefix}help for list.",
+    cooldown: "⏱️ Please wait {time}s before using again.",
+    disabled: "🚫 This command is currently disabled.",
+    error: "⚠️ Error while executing command: {cmd}"
+  },
+
+  // ─── 🧠 AI & Info ────────────────────────────────────
+  ai: {
+    thinking: "🤖 Thinking...",
+    response: "💬 {botName}: {reply}",
+    error: "⚠️ AI failed to process your message!"
+  },
+
+  // ─── 🪶 Miscellaneous ─────────────────────────────────
+  time: {
+    now: "🕒 Current time: {time}",
+    date: "📅 Today is {date}",
+    uptime: "💫 Uptime: {uptime}"
+  },
+
+  developer: {
+    author: "👑 Developer: Meheraz Islam Chishti",
+    contact: "💌 Contact: {link}",
+    powered: "⚡ Powered by Meheraz 💫"
+  }
+};
+
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
+// ⚡ Powered by Meheraz 💫
+// ✦━━━━━━━━━━━━━━━━━━━━━✦
