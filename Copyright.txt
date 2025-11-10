@@ -1,0 +1,22 @@
+✦━━━━━━━━━━━━━━━━━━━━━✦  
+📜 COPYRIGHT NOTICE  
+✦━━━━━━━━━━━━━━━━━━━━━✦  
+
+© 2025 𝑴𝒆𝒉𝒆𝒓𝒂𝒛 𝑰𝒔𝒍𝒂𝒎 𝑪𝒉𝒊𝒔𝒕𝒊 💫  
+All Rights Reserved.
+
+This software package (logger module) is developed in  
+𝑴𝒆𝒉𝒆𝒓𝒂𝒛 𝑺𝒕𝒚𝒍𝒆 — a signature design of aesthetic code structure  
+and animated console visualization.
+
+You are permitted to:
+- Use, modify, and redistribute for educational or personal use only.
+- Give proper credit: “Styled & Coded by Meheraz 💫”.
+
+You are **NOT** permitted to:
+- Sell or distribute this code as part of a paid package.
+- Remove or alter this copyright text.
+
+✦━━━━━━━━━━━━━━━━━━━━━✦  
+⚡ *Powered by Meheraz — Elegant Code, Glowing Output* ⚡  
+✦━━━━━━━━━━━━━━━━━━━━━✦
