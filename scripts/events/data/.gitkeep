@@ -1,0 +1,16 @@
+# ✦━━━━━━━━━━━━━━━━━━━━━✦
+# 💫 Meheraz Bot Event Data Keeper
+# ────────────────────────────────
+# This file ensures that the "event/data" folder
+# stays inside the Git repository even if empty.
+#
+# 📦 Purpose:
+#   - Store event logs 🗂️
+#   - Temporary JSON data 🧠
+#   - User activity cache ⚡
+#
+# ⚠️ Do NOT delete this file!
+# It preserves event tracking structure.
+#
+# ✨ Mirai x Meheraz Engine ✨
+# ✦━━━━━━━━━━━━━━━━━━━━━✦
