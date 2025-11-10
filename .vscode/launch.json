@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Meheraz Mini Bot",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/index.js",
+      "console": "integratedTerminal",
+      "runtimeExecutable": "node",
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "name": "Generate Background",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/make_background.js",
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Generate All Assets",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/AutoAssetsGenerator.js",
+      "console": "integratedTerminal"
+    }
+  ]
+}
